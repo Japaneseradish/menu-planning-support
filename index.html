@@ -182,10 +182,14 @@
 
         <button class="primary-btn" onclick="proposeMenu()">ベストな献立を提案する</button>
 
-        <div id="result-area">
+	<div id="result-area">
             <div class="result-title">あなたへの提案メニュー 5選</div>
             <div id="proposal-list"></div>
-        </div>
+            
+            <button class="primary-btn" style="background-color: var(--accent); margin-top: 20px;" onclick="proposeMenu()">
+                🔄 他の提案を見てみる
+            </button>
+            </div>
     </div>
 
     <script>
@@ -404,7 +408,7 @@
     { name: "チキンフリカッセ", cuisine: "western", main: "meat", tags: ["healthy", "muscle"], desc: "鶏肉のクリーム煮。優しい味。" },
     { name: "ミラノ風カツレツ", cuisine: "western", main: "meat", tags: ["stamina"], desc: "薄く叩いてチーズパン粉で焼く。" },
 
-    // ■■■ 追加データ：洋食・野菜・卵・その他（30品） ■■
+    // ■■■ 追加データ：洋食・野菜・卵・その他（30品） ■■■
     { name: "オムライス", cuisine: "western", main: "veg", tags: ["stamina"], desc: "ふわとろ卵が幸せ。中のライスは野菜多めで。" },
     { name: "オムレツ", cuisine: "western", main: "veg", tags: ["muscle", "diet"], desc: "プレーン、チーズ、スパニッシュなど自在。" },
     { name: "エッグベネディクト", cuisine: "western", main: "veg", tags: ["stamina"], desc: "ポーチドエッグとオランデーズソース。" },
@@ -891,6 +895,7 @@
     { name: "春雨スープ", cuisine: "other", main: "veg", tags: ["diet", "healthy"], desc: "低カロリーで満足感あり。" },
     { name: "ゆで卵", cuisine: "other", main: "veg", tags: ["muscle", "diet"], desc: "完全栄養食。塩だけで旨い。" }
         ];
+
 
         // --- UIロジック: 3連セレクトボックスの制御 ---
         function updateMenuOptions() {
